@@ -1,8 +1,37 @@
 import time
-heure=(23,59,57)
-alarm=(13,00,10)
-mode="12"
-# mode="24" 
+
+
+print("Réglage de l'horloge. Entrez d'abord l'heure, puis les minutes, et les secondes")
+h=int(input ("Heure : "))
+m=int(input ("Minutes : "))
+s=int(input ("Secondes : "))
+heure=(h, m, s)                     # tuple heure
+
+
+
+print("Réglage de l'alarme. Entrez d'abord l'heure, puis les minutes, et les secondes")
+h_alarm=int(input ("Alarme, entrez l'heure : "))
+m_alarm=int(input ("Alarme, entrez les minutes : "))
+s_alarm=int(input ("Alarme, entrez les secondes : "))
+alarm=(h_alarm, m_alarm, s_alarm)     # tuple alarm
+
+
+
+print("voulez-vous le mode AM-PM (entrez 12), ou le mode 24 h (entrez 24)")
+mode=(input("12 ou 24 : "))            # Choix du mode 12/24 heures
+
+while mode != '12' and mode != '24':
+    print("Choix non valide. Veuillez entrer '12' ou '24'.")
+    mode = input("Veuillez entrer '12' ou '24': ")
+
+if mode == '12':
+    print("Mode 12 heures sélectionné.")
+
+elif mode == '24':
+    print("Mode 24 heures sélectionné.")
+
+
+ 
 list_heure = list(heure)            # converti le tuple heure en liste
 list_alarm = list(alarm)            # converti le tuple alarm en liste
 
