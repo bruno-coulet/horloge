@@ -89,7 +89,7 @@ def onHorloge():                                       # fonction de remise en m
 def switchUser():                                   # fonction d'appel des fonctions marche, pause et arret
     global pauseHorloge, exitHorloge
     while not exitHorloge:
-        user=input("\nAppuyez sur 'd' et entrée pour démarrer l'horloge,\nAppuyez sur 'p' et entrée pour la mettre en pause,\nAppuyez sur 'q' pour quitter le programme : \n\n")
+        user=input("\nAppuyez sur 'd' et 'entrée' pour démarrer l'horloge,\nAppuyez sur 'p' et 'entrée' pour la mettre en pause,\nAppuyez sur 'q' et 'entrée' pour quitter le programme : \n\n")
         if user == 'p':
             offHorloge()
         elif user == 'd':
